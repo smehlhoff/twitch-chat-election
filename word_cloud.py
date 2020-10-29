@@ -1,7 +1,6 @@
-import pandas as pd
 import matplotlib.pyplot as plt
-
-from wordcloud import WordCloud, STOPWORDS
+import pandas as pd
+from wordcloud import STOPWORDS, WordCloud
 
 df = pd.read_csv("./misc/chanlog.csv")
 

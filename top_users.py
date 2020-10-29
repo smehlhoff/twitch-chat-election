@@ -1,7 +1,7 @@
-import pandas as pd
-import matplotlib.pyplot as plt
-
 from collections import Counter
+
+import matplotlib.pyplot as plt
+import pandas as pd
 
 df = pd.read_csv("./misc/chanlog.csv")
 
