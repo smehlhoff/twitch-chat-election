@@ -3,7 +3,7 @@ import pandas as pd
 
 df = pd.read_csv("./misc/chanlog.csv")
 
-subs = df.loc[df['sub_count'] > 0]
+subs = df.loc[df["sub_count"] > 0]
 subs = subs.groupby(["sub_count"])["username"].nunique()
 
 x = [i for i in range(1, len(subs) + 1)]
