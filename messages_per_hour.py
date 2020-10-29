@@ -1,3 +1,4 @@
+import math
 from statistics import mean
 
 import matplotlib.pyplot as plt
@@ -12,6 +13,9 @@ series = df.groupby(["hour"])["username"].count()
 
 mean_val = mean(series)
 
+x = ((df["hour"].max() - df["hour"].min()) / 2) + df["hour"].min()
+y = math.ceil(mean_val) + 500
+
 plt.plot(series, marker="o")
 plt.axhline(mean_val, color="red", linestyle="--")
 plt.locator_params(axis="both", integer=True)
@@ -19,6 +23,6 @@ plt.xlabel("Hour")
 plt.ylabel("Number of messages")
 plt.title("Number of messages per hour")
 plt.legend(labels=["Messages", "Mean"], loc=4)
-plt.text(18.5, 22000, f"{mean_val}")
+plt.text(x=x, y=y, s=f"{mean_val}")
 plt.tight_layout()
 plt.show()
