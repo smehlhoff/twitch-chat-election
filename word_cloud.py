@@ -24,5 +24,4 @@ wordcloud = WordCloud(width=1920, height=1080, background_color="black", random_
 plt.imshow(wordcloud)
 plt.axis("off")
 plt.tight_layout()
-
 plt.show()

@@ -11,10 +11,8 @@ usernames = [item[0] for item in c]
 freq = [item[1] for item in c]
 
 plt.barh(usernames, freq)
-plt.title("Top 10 spoken users")
-plt.xlabel("Number of lines spoken")
+plt.xlabel("Number of lines")
 plt.ylabel("Username")
-
+plt.title("Top 10 most active users")
 plt.tight_layout()
-
 plt.show()

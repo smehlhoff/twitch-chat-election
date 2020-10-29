@@ -9,11 +9,9 @@ subs = subs.groupby(["sub_count"])["username"].nunique()
 x = [i for i in range(1, len(subs) + 1)]
 y = [val for val in subs]
 
-fig, ax = plt.subplots()
-
-ax.bar(x, y)
-ax.set_ylabel("User count")
-ax.set_xlabel("Months subscribed")
-ax.set_title("Subscriber breakdown by months subscribed consecutively")
-
+plt.bar(x, y)
+plt.xlabel("Months subscribed")
+plt.ylabel("Subscriber count")
+plt.title("Subscriber breakdown by months subscribed consecutively")
+plt.tight_layout()
 plt.show()
