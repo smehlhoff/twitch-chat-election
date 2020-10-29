@@ -11,8 +11,11 @@ df = pd.read_csv("./misc/chanlog.csv")
 
 
 def fetch_emotes(url: str, id: str) -> str:
-    resp = requests.get(f"{url}{id}")
-    json = resp.json()
+    try:
+        resp = requests.get(f"{url}{id}")
+        json = resp.json()
+    except requests.exceptions.RequestException as e:
+        print(e)
 
     return json
 
