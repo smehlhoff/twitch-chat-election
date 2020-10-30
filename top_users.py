@@ -11,8 +11,8 @@ usernames = [item[0] for item in c]
 lines = [item[1] for item in c]
 
 plt.barh(usernames, lines)
-plt.xlabel("Number of lines")
+plt.xlabel("Number of messages")
 plt.ylabel("Username")
-plt.title("Top 10 most active users")
+plt.title("Top 10 active users")
 plt.tight_layout()
 plt.show()
