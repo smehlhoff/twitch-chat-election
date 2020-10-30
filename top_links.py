@@ -23,10 +23,10 @@ for msg in df["user_msg"]:
             reddit.append(data["link"])
         overall.append(data["link"])
 
-overall = dict(Counter(overall).most_common(10))
-youtube = dict(Counter(youtube).most_common(10))
-twitter = dict(Counter(twitter).most_common(10))
-reddit = dict(Counter(reddit).most_common(10))
+overall = dict(Counter(overall).most_common(15))
+youtube = dict(Counter(youtube).most_common(15))
+twitter = dict(Counter(twitter).most_common(15))
+reddit = dict(Counter(reddit).most_common(15))
 
 with open("top_links.json", "w", encoding="utf-8") as f:
     json.dump({"top_links": [{"overall": overall}, {"youtube": youtube},
