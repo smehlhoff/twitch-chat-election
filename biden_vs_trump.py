@@ -19,7 +19,7 @@ sizes = [len(biden), len(trump)]
 
 plt.pie(sizes, autopct="%1.1f%%", explode=(0.1, 0), wedgeprops={"edgecolor": "black"})
 plt.axis("equal")
-plt.title("Which candidate was referenced more?")
+plt.title("Which candidate was mentioned more?")
 plt.legend(labels=["Biden", "Trump"], loc=4)
 plt.tight_layout()
 plt.show()
