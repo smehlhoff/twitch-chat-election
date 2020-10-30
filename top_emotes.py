@@ -40,6 +40,7 @@ emotes = []
 
 for msg in df["user_msg"]:
     msg = msg.split()
+
     for emote in msg:
         if emote in default_emotes or emote in frankerz_emotes or emote in betterttv_emotes:
             emotes.append(emote)
