@@ -14,6 +14,7 @@ reddit = []
 
 for msg in df["user_msg"]:
     data = re.search("(https?://(www.)?|www.)(?P<link>[^\s]+)", msg)
+    
     if data:
         if re.search("(youtube)", data["link"]):
             youtube.append(data["link"])
