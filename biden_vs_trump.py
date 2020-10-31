@@ -12,7 +12,8 @@ for msg in df["user_msg"]:
     for word in msg:
         if "biden" in word:
             biden += 1
-        elif "trump" in word:
+        # don't count TTrump emote
+        elif "trump" in word and word != "ttrump":
             trump += 1
 
 biden_emotes = 0
