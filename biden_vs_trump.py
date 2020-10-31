@@ -42,7 +42,7 @@ fig.suptitle("Which candidate had more mentions?")
 
 ax1.pie(sizes, autopct="%1.1f%%", explode=(0.1, 0), wedgeprops={"edgecolor": "black"})
 ax1.axis("equal")
-ax1.title.set_text("Phrases")
+ax1.title.set_text("Words")
 ax1.legend(labels=["Biden", "Trump"], loc=4)
 
 ax2.pie(sizes2, autopct="%1.1f%%", explode=(0.1, 0), wedgeprops={"edgecolor": "black"})
