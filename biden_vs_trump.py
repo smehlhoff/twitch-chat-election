@@ -18,6 +18,7 @@ for msg in df["user_msg"]:
 biden_emotes = 0
 trump_emotes = 0
 
+# include these emotes because their underlying meaning and usage represents these candidates
 _biden_emotes = ["MALARKEY"]
 _trump_emotes = ["CHYNA", "DonaldPls", "TTrump"]
 
