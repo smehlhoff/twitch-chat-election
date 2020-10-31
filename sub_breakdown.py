@@ -10,7 +10,7 @@ x = [i for i in range(1, len(subs) + 1)]
 y = [val for val in subs]
 
 plt.bar(x, y)
-plt.xlabel("Months")
+plt.xlabel("Month")
 plt.ylabel("Subscriber count")
 plt.title("Breakdown of subscribers who spoke by months subscribed consecutively")
 plt.tight_layout()
