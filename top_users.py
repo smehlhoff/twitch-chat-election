@@ -8,9 +8,9 @@ df = pd.read_csv("./misc/chanlog.csv")
 c = Counter(df["username"]).most_common(10)
 
 usernames = [item[0] for item in c]
-lines = [item[1] for item in c]
+messages = [item[1] for item in c]
 
-plt.barh(usernames, lines)
+plt.barh(usernames, messages)
 plt.xlabel("Number of messages")
 plt.ylabel("Username")
 plt.title("Top 10 active users")
