@@ -12,6 +12,6 @@ y = [val for val in subs]
 plt.bar(x, y)
 plt.xlabel("Month")
 plt.ylabel("Subscriber count")
-plt.title("Breakdown of subscribers who spoke by months subscribed consecutively")
+plt.title("Breakdown of subscribers who spoke by\nmonths subscribed consecutively")
 plt.tight_layout()
 plt.show()
