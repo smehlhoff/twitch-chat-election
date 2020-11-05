@@ -7,6 +7,7 @@ biden = 0
 trump = 0
 
 for msg in df["user_msg"]:
+    msg = str(msg)
     msg = msg.lower().split()
 
     for word in msg:
@@ -24,6 +25,7 @@ _biden_emotes = ["MALARKEY"]
 _trump_emotes = ["CHYNA", "DonaldPls", "TTrump"]
 
 for msg in df["user_msg"]:
+    msg = str(msg)
     msg = msg.split()
 
     for word in msg:

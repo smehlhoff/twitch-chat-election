@@ -39,6 +39,7 @@ betterttv_emotes += [emote["code"] for emote in data["sharedEmotes"]]
 emotes = []
 
 for msg in df["user_msg"]:
+    msg = str(msg)
     msg = msg.split()
 
     for emote in msg:
