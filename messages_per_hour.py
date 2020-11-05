@@ -13,9 +13,6 @@ series = df.groupby(["hour"])["username"].count()
 
 mean_val = mean(series)
 
-x_text = ((df["hour"].max() - df["hour"].min()) / 2) + df["hour"].min()
-y_text = math.ceil(mean_val) + 500
-
 plt.plot(series, marker="o")
 plt.axhline(mean_val, color="red", linestyle="--")
 plt.locator_params(axis="both", integer=True)
@@ -23,6 +20,6 @@ plt.xlabel("Hour")
 plt.ylabel("Message count")
 plt.title("Number of messages per hour")
 plt.legend(labels=["Messages", "Mean"], loc=4)
-plt.text(x=x_text, y=y_text, s=f"{mean_val}", horizontalalignment="center")
+plt.text(x=5, y=26000, s=f"{mean_val:.2f}", horizontalalignment="center")
 plt.tight_layout()
 plt.show()
