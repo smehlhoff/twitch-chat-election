@@ -8,7 +8,9 @@ words = ""
 stopwords = set(STOPWORDS)
 
 for msg in df["user_msg"]:
+    msg = str(msg)
     tokens = msg.split()
+
     words += " ".join(tokens) + " "
 
 wordcloud = WordCloud(width=1920, height=1080, background_color="black", random_state=1,
@@ -17,4 +19,4 @@ wordcloud = WordCloud(width=1920, height=1080, background_color="black", random_
 plt.imshow(wordcloud)
 plt.axis("off")
 plt.tight_layout()
-plt.show()
+plt.savefig("word_cloud.png")

@@ -53,4 +53,4 @@ ax2.title.set_text("Emotes")
 ax2.legend(labels=["Biden", "Trump"], loc=4)
 
 plt.tight_layout()
-plt.show()
+plt.savefig("biden_vs_trump.png")
