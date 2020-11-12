@@ -1,1 +1,1 @@
-# Analyzing Twitch Chat on Election Day
+This is the source code for [Analyzing Twitch Chat on Election Day](https://www.smehlhoff.dev/posts/2020/11/analyzing-twitch-chat-on-election-day/).
