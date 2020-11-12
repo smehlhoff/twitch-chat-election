@@ -75,7 +75,7 @@ for msg in df["user_msg"]:
         if state in STATES.keys():
             states.append(state)
 
-states = dict(Counter(state_count).most_common(10))
+states = dict(Counter(states).most_common(10))
 
 x = list(states.keys())
 y = list(states.values())
