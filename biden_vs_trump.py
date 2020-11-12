@@ -13,14 +13,14 @@ for msg in df["user_msg"]:
     for word in msg:
         if "biden" in word:
             biden += 1
-        # ensure TTrump emote is not counted
+        # the TTrump emote should not be counted here
         elif "trump" in word and word != "ttrump":
             trump += 1
 
 biden_emotes = 0
 trump_emotes = 0
 
-# include these emotes because their usage represents biden or trump
+# include these emotes because their usage references biden or trump
 _biden_emotes = ["MALARKEY"]
 _trump_emotes = ["CHYNA", "DonaldPls", "TTrump"]
 
