@@ -2,7 +2,7 @@ from collections import Counter
 
 import matplotlib.pyplot as plt
 import pandas as pd
-from wordcloud import STOPWORDS
+from nltk.corpus import stopwords
 
 df = pd.read_csv("./misc/chanlog.csv")
 
@@ -28,6 +28,8 @@ for msg in df["user_msg"]:
 
 print(f"Total unique words used: {len(unique_words):,}")
 
+STOPWORDS = set(stopwords.words('english'))
+
 stop_words = 0
 
 for msg in df["user_msg"]:
@@ -43,7 +45,7 @@ print(f"Total stop words used: {stop_words:,}")
 word_count = df["word_count"] = df["user_msg"].apply(lambda x: len(str(x).split(" ")))
 word_count = word_count.mean()
 
-print(f"Average word count: {word_count:.2f}")
+print(f"Average word count per message: {word_count:.2f}")
 
 total_users = df["username"].nunique()
 
