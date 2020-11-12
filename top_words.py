@@ -47,9 +47,9 @@ betterttv_emotes += [emote["code"] for emote in data["sharedEmotes"]]
 
 emotes = global_emotes + channel_emotes + frankerz_emotes + betterttv_emotes
 
-words = []
+STOPWORDS = set(stopwords.words('english'))
 
-stop_words = set(stopwords.words('english'))
+words = []
 
 for msg in df["user_msg"]:
     msg = str(msg)
@@ -58,7 +58,7 @@ for msg in df["user_msg"]:
     for word in msg:
         if word not in emotes:
             word = word.lower()
-            if word not in stop_words:
+            if word not in STOPWORDS:
                 words.append(word)
 
 words = dict(Counter(words).most_common(10))

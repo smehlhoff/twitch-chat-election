@@ -4,8 +4,9 @@ from wordcloud import STOPWORDS, WordCloud
 
 df = pd.read_csv("./misc/chanlog.csv")
 
+STOPWORDS = set(STOPWORDS)
+
 words = ""
-stopwords = set(STOPWORDS)
 
 for msg in df["user_msg"]:
     msg = str(msg)
@@ -14,7 +15,7 @@ for msg in df["user_msg"]:
     words += " ".join(tokens) + " "
 
 wordcloud = WordCloud(width=1920, height=1080, background_color="black", random_state=1,
-                      collocations=False, stopwords=stopwords, min_font_size=12).generate(words)
+                      collocations=False, stopwords=STOPWORDS, min_font_size=12).generate(words)
 
 plt.imshow(wordcloud)
 plt.axis("off")

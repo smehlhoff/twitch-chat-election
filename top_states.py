@@ -5,7 +5,7 @@ import pandas as pd
 
 df = pd.read_csv("./misc/chanlog.csv")
 
-states = {
+STATES = {
     "Alabama": "AL",
     "Alaska": "AK",
     "American Samoa": "AS",
@@ -64,7 +64,7 @@ states = {
     "Wyoming": "WY"
 }
 
-state_count = []
+states = []
 
 for msg in df["user_msg"]:
     msg = str(msg)
@@ -72,8 +72,8 @@ for msg in df["user_msg"]:
 
     for state in msg:
         state = state.title()
-        if state in states.keys():
-            state_count.append(state)
+        if state in STATES.keys():
+            states.append(state)
 
 states = dict(Counter(state_count).most_common(10))
 
